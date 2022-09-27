@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block titulo %} Contactos {% endblock titulo %}
+
+
+{% block content %}
+
+{% include 'includes/header.html' %}
+
+<div class="center padded">
+    <div class="content">
+        <div class="row vert-pad">
+            <div class="left padded">
+                <h1>Puedes dejarme un correo! :)</h1>
+                <p class="parrafos">Que estas esperando? contrata a un desarrollador de primer nivel</p>
+            </div>
+            <div class="right padded">
+                <form method="post" class="contact-form">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn full-width">Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% include 'includes/footer.html' %}
+{% endblock content %}
+    
+    

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Proyectos {% endblock titulo %}
+
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<div class="center padded">
+    <div class="content padded">
+        <div class="padded">
+            <h1>Proyectos Construidos</h1>
+        </div>
+        
+        {% for p in projects %}                    
+        <div class="row-project">
+            <div class="card third">
+                <h3>{{ p.titulo }}</h3>
+                <p>{{ p.descripcion }}</p>
+                <hr>
+                <img src="{{ p.imagen.url }}" alt="" width="200px" height="200px" class="img-p">
+                <br>
+                <a href="{{ p.url }}" target="_blank" style="text-decoration:none; background-color: #ABD9FF; color: black; border-radius: 5px; font-size: 15px; padding: 5px 10px; font-weight: 700;">link aqui</a>
+            </div>
+        </div>
+        {% endfor %}        
+    </div>    
+</div>
+{% include 'includes/footer.html' %}        
+
+{% endblock content %}
+    

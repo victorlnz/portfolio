@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Victor Lanza {% endblock titulo %}
+
+
+{% block content %}
+    {% include 'includes/header.html' %}
+    <div class="hero">
+        <div class="hero-content">
+            <div class="left">
+                <h1 class="titulos">Victor Lanza</h1>
+                <h3 class="titulos">Backend developer</h3>
+                <p>Construyo aplicaciones dinamicas utilizando frameworks como django y flask</p>
+                <a href="{% url 'portafolio_app:contactos' %}" class="btn">Contacto</a>
+            </div>
+            <div class="right">
+                <img src="{% static 'img/desarollador.png' %}" alt="developer" width="600px">
+            </div>
+        </div>            
+    </div>
+    {% include 'includes/seccion1.html' %}
+
+    {% include 'includes/footer.html' %}
+        
+{% endblock content %}
+    
+    

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %} Mensaje enviado {% endblock titulo %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+ <div class="hero">
+    <div class="hero-content">
+        <div class="left">
+            <h1>Excelente! Mensaje enviado!</h1>
+            <p>Pronto tendras respuesta de victor</p>
+        </div>
+        <div class="right">
+            <img src="{% static 'img/email.png' %}" alt="" width="600px">
+        </div>
+    </div>
+ </div>
+{% include 'includes/footer.html' %}     
+{% endblock content %}
+    
+    
